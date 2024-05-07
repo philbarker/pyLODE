@@ -4,7 +4,7 @@ import sys
 
 sys.path.insert(0, str(Path(__file__).absolute().parent.parent))
 from pylode import __version__, PylodeError
-from pylode import OntPub, VocPub, Supermodel
+from pylode import OntPub, VocPub, Supermodel, CEDSPub
 
 parser = argparse.ArgumentParser()
 
@@ -41,7 +41,7 @@ parser.add_argument(
     "'ontpub' (https://w3id.org/profile/ontpub) - for ontologies, "
     "'vocpub' (https://w3id.org/profile/vocpub) - for SKOS vocabularies"
     "'supermodel' - for profiles of profiles",
-    choices=["ontpub", "vocpub", "supermodel"],
+    choices=["ontpub", "vocpub", "supermodel", "cedspub"],
     default="ontpub",
 )
 
@@ -52,6 +52,8 @@ def main():
     try:
         if args.profile == "ontpub":
             html = OntPub(args.input)
+        elif args.profile == "cedspub":
+            html = CEDSPub(args.input)
         elif args.profile == "vocpub":
             html = VocPub(args.input)
         elif args.profile == "supermodel":

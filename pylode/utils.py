@@ -41,6 +41,9 @@ try:
         OWL_SET_TYPES,
         PROPS,
         RESTRICTION_TYPES,
+        NI_PROPS,
+        CONCEPT_PROPS,
+        SCHEME_PROPS,
     )
 except ImportError:
     from rdf_elements import (
@@ -50,6 +53,9 @@ except ImportError:
         OWL_SET_TYPES,
         PROPS,
         RESTRICTION_TYPES,
+        NI_PROPS,
+        CONCEPT_PROPS,
+        SCHEME_PROPS,
     )
 
 RDF_FOLDER = Path(__file__).parent / "rdf"
@@ -410,6 +416,7 @@ def rdf_obj_html(
                     OWL.AnnotationProperty,
                     OWL.FunctionalProperty,
                     RDF.Property,
+                    OWL.NamedIndividual,
                 ]
 
                 this_objects_types = []

@@ -2,3 +2,4 @@ rdflib
 markdown
 dominate
 html5lib
+httpx

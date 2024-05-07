@@ -61,6 +61,45 @@ CLASS_PROPS = [
     ONTDOC.superClassOf,
 ]
 
+NI_PROPS = [
+    RDFS.isDefinedBy,
+    DCTERMS.title,
+    DCTERMS.description,
+    SKOS.scopeNote,
+    SKOS.example,
+    DCTERMS.source,
+    DCTERMS.provenance,
+    SKOS.note,
+    RDF.type,
+    OWL.equivalentClass,
+]
+
+CONCEPT_PROPS = [
+    RDFS.isDefinedBy,
+    DCTERMS.title,
+    DCTERMS.description,
+    SKOS.scopeNote,
+    SKOS.example,
+    DCTERMS.source,
+    DCTERMS.provenance,
+    SKOS.note,
+    SKOS.inScheme,
+    OWL.equivalentClass,
+]
+
+SCHEME_PROPS = [
+    RDFS.isDefinedBy,
+    DCTERMS.title,
+    DCTERMS.description,
+    SKOS.scopeNote,
+    SKOS.example,
+    DCTERMS.source,
+    DCTERMS.provenance,
+    SKOS.note,
+    OWL.equivalentClass,
+    ONTDOC.hasMember,
+]
+
 # properties for instances of RDF Property and OWL specialised
 # forms, such as ObjectProperty etc.
 PROP_PROPS = [
@@ -117,6 +156,8 @@ ONT_TYPES = {
     OWL.FunctionalProperty: ("fp", "OWL Functional Property"),
     OWL.InverseFunctionalProperty: ("ifp", "OWL Inverse Functional Property"),
     OWL.NamedIndividual: ("ni", "OWL Named Individual"),
+    SKOS.Concept: ("sc", "SKOS Concept"),
+    SKOS.ConceptScheme: ("scs", "SKOS Concept Scheme")
 }
 
 RESTRICTION_TYPES = [
